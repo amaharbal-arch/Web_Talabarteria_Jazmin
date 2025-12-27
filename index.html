@@ -70,12 +70,28 @@
     .hamburger span{ width:30px; height:3px; background:var(--soft-cream); margin:4px 0; transition:.3s; border-radius:2px; }
 
     /* Hero */
-    .hero{
-      height:90vh;
-      background: url('images/volcan.jpeg') no-repeat center center/cover;
-      display:flex; align-items:center; justify-content:center; text-align:center; position:relative;
-      background-attachment: fixed;
-    }
+   /* Hero con video */
+.hero{
+  height:90vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  min-width:100%;
+  min-height:100%;
+  transform:translate(-50%, -50%);
+  object-fit:cover;
+  z-index:1;
+}
+
     .hero-content{
       max-width:700px; color:#2e2116; z-index:2;
       animation: fadeInUp 1.2s ease-out;
@@ -223,12 +239,20 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h1>Talabartería Jazmín</h1>
-      <h3>Artesanía en cuero hecha con pasión y maestría desde hace 6 años, piezas que cuentan historias.</h3>
-    </div>
-  </section>
+ <!-- Hero con video -->
+<section class="hero" id="inicio">
+
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/Video_XILOGRAFIA.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <div class="hero-content">
+    <h1>Talabartería Jazmín</h1>
+    <h3>Artesanía en cuero hecha con pasión y maestría desde hace 6 años, piezas que cuentan historias.</h3>
+  </div>
+
+</section>
 
   <!-- Products (con barra de categorías mejorada) -->
   <section class="section" id="productos">
@@ -607,6 +631,7 @@
   </script>
 </body>
 </html>
+
 
 
 
