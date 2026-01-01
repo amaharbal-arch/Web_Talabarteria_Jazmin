@@ -146,12 +146,12 @@
     .about-image{ height:380px; background-color:var(--deep-chestnut); border-radius:8px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,0.08); }
     .about-image img{ width:100%; height:100%; object-fit:cover; }
 
-    /* Contact */
-    .contact-container{ display:grid; grid-template-columns:1fr; gap:2.0rem; align-items:flex-start; }
-    .contact-item{ display:flex; align-items:center; gap:0.6rem; padding:0.6rem; background:white; border-radius:8px; box-shadow:0 5px 20px rgba(0,0,0,0.05); border:1px solid var(--light-taupe); overflow:hidden; }
+    /* Contact - AJUSTE ELEGANTE PARA RECUADROS */
+    .contact-container{ display:grid; grid-template-columns:1fr; gap:1.4 rem; align-items:flex-start; }
+    .contact-item{ display:flex; align-items:center; gap:0.6rem; padding:1rem; background:white; border-radius:8px; box-shadow:0 8px 20px rgba(0,0,0,0.05); border:1px solid var(--light-taupe); transition: all 0.3s ease; }
     .contact-icon{ width:35px; height:35px; background: linear-gradient(45deg,var(--antique-gold),#A07F00); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:0.8rem; flex-shrink:0; }
-    .contact-item h4{ font-family:'Playfair Display', serif; color:var(--text-dark-cafe); margin-bottom:0; font-size:0.8rem; white-space: nowrap; }
-    .contact-item p{ color:var(--main-dark-charcoal); font-size:0.75rem; white-space: nowrap; }
+    .contact-item h4{ font-family:'Playfair Display', serif; color:var(--text-dark-cafe); margin-bottom:0; font-size:0.70rem; }
+    .contact-item p{ color:var(--main-dark-charcoal); font-size:0.8rem; word-break: break-all; }
 
     /* Footer */
     .footer{ background:var(--main-dark-charcoal); color:var(--soft-cream); text-align:center; padding:3rem 1.5rem 1.2rem; }
@@ -159,30 +159,23 @@
     .footer-section h3{ font-family:'Playfair Display', serif; color:var(--antique-gold); margin-bottom:.8rem; font-size:1.1rem; display:flex; align-items:center; gap:.6rem; }
     .footer-section p{ font-size:.95rem; line-height:1.6; color:var(--taupe-gray); }
     
-    /* CORRECCIÓN: Destaque de Horario */
-    .contact-footer {
-      border: 1px solid rgba(181, 148, 16, 0.2);
-      padding: 1rem;
+    /* RECUADRO DESTACADO HORARIO */
+    .footer-section.horario-box {
+      border: 1px solid var(--antique-gold);
+      padding: 1.5rem;
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .footer-links{ list-style:none; display:flex; flex-direction:column; gap:.5rem; }
-    .footer-links a{ color:var(--soft-cream); text-decoration:none; position:relative; padding-left:16px; }
-    .footer-links a::before{ content:'•'; position:absolute; left:0; color:var(--antique-gold); }
-    .footer-bottom{ border-top:1px solid rgba(248,248,248,0.06); padding-top:1rem; opacity:.95; font-size:.9rem; color:var(--taupe-gray); text-align:center; }
-    /* Destaque Horario CORRECCION */
-    .contact-footer {
-      border: 1px solid rgba(181, 148, 16, 0.25);
-      padding: 1.2rem;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(181, 148, 16, 0.05);
     }
     .horario-destacado {
-      font-size: 1.1rem; /* Un poco más grande */
+      font-size: 1.3rem !important; /* Letra un poco más grande */
       color: var(--antique-gold);
       font-weight: 700;
       margin-bottom: 0.5rem;
+    }
+    .horario-texto {
+      font-size: 1.1rem !important;
+      font-weight: 600;
+      color: var(--soft-cream);
     }
 
     .footer-links{ list-style:none; display:flex; flex-direction:column; gap:.5rem; }
@@ -454,7 +447,7 @@
   <section class="section" id="contacto">
     <h2 class="section-title">Conéctate con Nosotros</h2>
     <div class="contact-container">
-      <div class="contact-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0.8rem;">
+      <div class="contact-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem;">
         
         <div class="contact-item">
           <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
@@ -493,7 +486,7 @@
           <div>
             <h4>Visítanos</h4>
             <p>Paseo Arauco 673</p>
-            <p>Chillán, Ñuble, Chile</p>
+            <p>Chillán, Ñuble</p>
           </div>
         </div>
                    
@@ -520,11 +513,10 @@
         </ul>
       </div>
 
-     <div class="footer-section links-footer">
+     <div class="footer-section horario-box">
         <h2 class="horario-destacado">Horario de Atención</h2>
-        <h4 >Lunes a Sábado: 9:00 - 15:00 hrs</h4>
-        <p><i class="fas fa-map-marker-alt"></i> Peatonal-Arauco 673, Chillán, Ñuble, Chile</p>
-        
+        <h4 class="horario-texto">Lunes a Sábado: 9:00 - 15:00 hrs</h4>
+        <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt"></i> Peatonal-Arauco 673, Chillán, Ñuble, Chile</p>
         
         <div style="margin-top:.8rem; display:flex; gap:.5rem;">
            <a href="#" style="width:40px;height:40px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-whatsapp"></i></a>
@@ -594,4 +586,3 @@
   </script>
 </body>
 </html>
-
