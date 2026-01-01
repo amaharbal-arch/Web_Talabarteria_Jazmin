@@ -70,7 +70,7 @@
     .hamburger span{ width:30px; height:3px; background:var(--soft-cream); margin:4px 0; transition:.3s; border-radius:2px; }
 
     /* Hero */
-   /* Hero con video */
+    /* Hero con video */
 .hero{
   height:90vh;
   position:relative;
@@ -149,16 +149,6 @@
 
     /* Contact */
     .contact-container{ display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:flex-start; }
-    .contact-form{ background:white; padding:2.4rem; border-radius:8px; box-shadow:0 10px 35px rgba(0,0,0,0.08); border:1px solid var(--light-taupe); }
-    .contact-form h3{ font-family:'Playfair Display', serif; font-size:1.4rem; color:var(--text-dark-cafe); margin-bottom:1.2rem; text-align:center; }
-    .form-group{ margin-bottom:1.2rem; }
-    .form-group label{ display:block; margin-bottom:.5rem; color:var(--text-dark-cafe); font-weight:600; font-size:.98rem; }
-    .form-group input, .form-group textarea{ width:100%; padding:.9rem; border:1px solid var(--light-taupe); border-radius:6px; font-size:.98rem; transition:border-color .3s ease, box-shadow .3s ease; font-family:'Lora', serif; color:var(--main-dark-charcoal); }
-    .form-group input:focus, .form-group textarea:focus{ outline:none; border-color:var(--antique-gold); box-shadow: 0 0 0 3px rgba(181,148,16,0.12); }
-    .submit-btn{ background: linear-gradient(45deg,var(--deep-chestnut),var(--antique-gold)); color:white; padding:1rem 1.6rem; border:none; border-radius:6px; font-size:1rem; cursor:pointer; transition: all .3s ease; width:100%; font-weight:600; }
-    .submit-btn:hover{ transform: translateY(-3px); box-shadow:0 6px 20px rgba(94,60,45,0.25); background: linear-gradient(45deg,var(--antique-gold),var(--deep-chestnut)); }
-
-    .contact-info{ display:flex; flex-direction:column; gap:1rem; }
     .contact-item{ display:flex; align-items:flex-start; gap:1rem; padding:1rem; background:white; border-radius:8px; box-shadow:0 5px 20px rgba(0,0,0,0.05); border:1px solid var(--light-taupe); }
     .contact-icon{ width:60px; height:60px; background: linear-gradient(45deg,var(--antique-gold),#A07F00); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0; }
     .contact-item h4{ font-family:'Playfair Display', serif; color:var(--text-dark-cafe); margin-bottom:.25rem; font-size:1rem; }
@@ -218,7 +208,6 @@
   </style>
 </head>
 <body>
-  <!-- Header / Nav -->
   <header class="header" id="header">
     <nav class="nav-container">
       <a href="#inicio" class="logo">
@@ -238,27 +227,20 @@
     </nav>
   </header>
 
-  <!-- Hero -->
- <!-- Hero con video -->
-<section class="hero" id="inicio">
-
+  <section class="hero" id="inicio">
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="images/Video_XILOGRAFIA.mp4" type="video/mp4">
     Tu navegador no soporta video.
   </video>
-
   <div class="hero-content">
     <h1>Talabartería Jazmín</h1>
     <h3>Artesanía en cuero hecha con pasión y maestría desde hace 6 años, piezas que cuentan historias.</h3>
   </div>
-
 </section>
 
-  <!-- Products (con barra de categorías mejorada) -->
   <section class="section" id="productos">
     <h2 class="section-title">Nuestros Productos</h2>
 
-    <!-- Barra de categorias -->
     <div class="category-bar" role="tablist" aria-label="Categorías de productos">
       <button class="category-btn active" data-filter="all">Todos</button>
       <button class="category-btn" data-filter="cinturones">Cinturones</button>
@@ -270,7 +252,6 @@
     </div>
 
     <div class="products-grid" id="products-grid">
-      <!-- Cada tarjeta tiene data-category (puedes poner multiples separados por espacio) -->
       <div class="product-card" data-category="cinturones accesorios">
         <div class="product-image-placeholder">
           <img src="images/CORREA.jpeg" alt="Cinturón Artesanal">
@@ -429,7 +410,6 @@
     </div>
   </section>
 
-  <!-- About -->
   <section class="section about" id="sobre-nosotros">
     <h2 class="section-title">Nuestra Esencia y Legado</h2>
     <div class="about-content">
@@ -445,59 +425,56 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="section" id="contacto">
     <h2 class="section-title">Conéctate con Nosotros</h2>
-    <div class="contact-container">
-      
-
-      <div class="contact-info">
+    <div class="contact-container" style="grid-template-columns: 1fr;">
+      <div class="contact-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        
         <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
           <div>
-            <h4>Visítanos</h4>
-            <p>Chillán, Ñuble, Chile</p>
+            <h4>WhatsApp Business</h4>
+            <p>WhatsApp: +56 9 6402 0658</p>
           </div>
         </div>
-
+        
         <div class="contact-item">
+          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+          <div>
+            <h4>Instagram</h4>
+            <p>@talabarteriajazmin</p>
+          </div>
+        </div>
+        
+         <div class="contact-item">
           <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
             <h4>Llámanos</h4>
-            <p>📞 +56 9 6402 0658 </p>
+            <p>+56 9 6402 0658</p>
           </div>
         </div>
-
+        
         <div class="contact-item">
           <div class="contact-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <h4>Escríbenos</h4>
-            <p>📧 info@talabarteriajazmin.cl</p>
+            <p>info@talabarteriajazmin.cl</p>
           </div>
         </div>
-
+        
         <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div>
-            <h4>Horario de Atención</h4>
-            <p>Lunes a Viernes: 9:00 - 18:00 hrs</p>
-            <p>Sábados: 10:00 - 14:00 hrs</p>
+            <h4>Visítanos</h4>
+            <p>Peatonal-Arauco 673</p>
+            <p>Chillán, Región de Ñuble, Chile</p>
           </div>
         </div>
-
-        <div>
-          <h4>Síguenos en Redes Sociales</h4>
-          <div style="margin-top:.5rem; display:flex; gap:.6rem;">
-            <a href="#" class="social-link" aria-label="Facebook" style="width:46px;height:46px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link" aria-label="Instagram" style="width:46px;height:46px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="WhatsApp" style="width:46px;height:46px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
+               
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section about-footer">
@@ -518,14 +495,15 @@
       </div>
 
       <div class="footer-section contact-footer">
-        <h3>Contacto</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Paseo Arauco 345, Chillán, Ñuble, Chile</p>
-        <p><i class="fas fa-phone-alt"></i> +56 9 6402 0658</p>
-        <p><i class="fas fa-envelope"></i> info@talabarteriajazmin.cl</p>
+        <h3>Horario de Atención</h3>
+        <p>Lunes a Sábado: 9:00 - 15:00 hrs</p>
+        <p><i class="fas fa-map-marker-alt"></i> Peatonal-Arauco 673, Chillán, Ñuble, Chile</p>
+        
         <div style="margin-top:.8rem; display:flex; gap:.5rem;">
-          <a href="#" style="width:40px;height:40px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-facebook-f"></i></a>
+           <a href="#" style="width:40px;height:40px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-whatsapp"></i></a>
           <a href="#" style="width:40px;height:40px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-instagram"></i></a>
-          <a href="#" style="width:40px;height:40px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" style="width:40px;height:40px;border-radius:50%;background:var(--deep-chestnut);display:flex;align-items:center;justify-content:center;color:white;"><i class="fas fa-phone"></i></a>          
+         
         </div>
       </div>
     </div>
@@ -535,7 +513,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/+56 9 6402 0658" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/56964020658" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
   <script>
     // Menu hamburguesa
@@ -547,15 +525,7 @@
       navMenu.classList.toggle('active');
       hamburger.classList.toggle('active');
     });
-    hamburger.addEventListener('keydown', (e) => {
-      if(e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-      }
-    });
 
-    // Cerrar menú al clicar un enlace (móvil)
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (navMenu.classList.contains('active')) {
@@ -565,28 +535,14 @@
       });
     });
 
-    // Efecto scroll header
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) header.classList.add('scrolled');
       else header.classList.remove('scrolled');
     });
 
-    // Previene el envío real del formulario (para pruebas)
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Formulario simulado: mensaje capturado. (Aquí debes conectar tu backend o servicio de email)');
-      contactForm.reset();
-    });
-
     // Filtrado de categorías
     const categoryButtons = document.querySelectorAll('.category-btn');
     const productCards = document.querySelectorAll('.product-card');
-
-    function setActiveButton(btn){
-      categoryButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    }
 
     function filterProducts(filter){
       productCards.forEach(card => {
@@ -601,21 +557,14 @@
 
     categoryButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-        setActiveButton(btn);
-        filterProducts(filter);
-        // opcional: mover hacia grid
+        categoryButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterProducts(btn.getAttribute('data-filter'));
         document.getElementById('products-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
-    // Inicial: mostrar todos
     filterProducts('all');
   </script>
 </body>
 </html>
-
-
-
-
-
